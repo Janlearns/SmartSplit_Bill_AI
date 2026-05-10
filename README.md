@@ -342,9 +342,3 @@ Kontribusi sangat disambut! Berikut langkah-langkahnya:
 3. Commit perubahan: `git commit -m 'feat: tambah fitur xyz'`
 4. Push ke branch: `git push origin feature/nama-fitur`
 5. Buat Pull Request
-
-.
-
-<p align="center">
-  Dibuat dengan ☕ dan 🤖 oleh <a href="https://github.com/username">username</a>
-</p>
