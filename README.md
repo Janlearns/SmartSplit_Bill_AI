@@ -25,14 +25,14 @@
 
 ## 🛠️ Tech Stack
 
-| Teknologi | Versi | Alasan Penggunaan |
-|---|---|---|
-| **Python** | 3.12 | Bahasa utama; ekosistem ML/AI terlengkap |
-| **Streamlit** | Latest | Framework web Python tercepat untuk prototyping aplikasi data |
+| Teknologi             | Versi            | Alasan Penggunaan                                                            |
+| --------------------- | ---------------- | ---------------------------------------------------------------------------- |
+| **Python**            | 3.12             | Bahasa utama; ekosistem ML/AI terlengkap                                     |
+| **Streamlit**         | Latest           | Framework web Python tercepat untuk prototyping aplikasi data                |
 | **Google Gemini API** | gemini-2.5-flash | Model multimodal terbaik untuk pembacaan gambar + teks dengan akurasi tinggi |
-| **Pillow (PIL)** | Latest | Preprocessing dan display gambar di dalam aplikasi |
-| **python-dotenv** | Latest | Manajemen environment variable agar API key tidak di-hardcode |
-| **Qwen2-VL** | 2B (eksperimen) | Model vision open-source lokal sebagai alternatif untuk perbandingan |
+| **Pillow (PIL)**      | Latest           | Preprocessing dan display gambar di dalam aplikasi                           |
+| **python-dotenv**     | Latest           | Manajemen environment variable agar API key tidak di-hardcode                |
+| **Qwen2-VL**          | 2B (eksperimen)  | Model vision open-source lokal sebagai alternatif untuk perbandingan         |
 
 ---
 
@@ -41,6 +41,7 @@
 ### Prerequisites
 
 Sebelum mulai, pastikan kamu sudah memiliki:
+
 - ✅ **Python 3.12** — [Download di sini](https://www.python.org/downloads/)
 - ✅ **Git** — [Download di sini](https://git-scm.com/downloads)
 - ✅ **Akun Google** — Untuk mendapatkan Gemini API key gratis
@@ -67,11 +68,13 @@ python -m venv venv
 ### Langkah 3: Aktifkan Virtual Environment
 
 **Windows (Command Prompt / PowerShell):**
+
 ```bash
 venv\Scripts\activate
 ```
 
 **macOS / Linux:**
+
 ```bash
 source venv/bin/activate
 ```
@@ -140,21 +143,27 @@ http://localhost:8501
 ## 📖 Cara Penggunaan
 
 **Step 1 — Upload Foto Nota**
+
 > Klik area upload atau drag & drop foto struk belanja kamu. Format yang didukung: JPG, JPEG, PNG.
 
 **Step 2 — Klik "Baca Nota dengan AI"**
+
 > Tekan tombol untuk mengirim gambar ke Google Gemini 2.5 Flash. Proses biasanya selesai dalam 2–5 detik.
 
 **Step 3 — Cek Hasil Bacaan AI**
+
 > Periksa daftar item yang berhasil diekstrak: nama item, qty, harga satuan, dan total. Pastikan hasilnya sesuai dengan struk asli.
 
 **Step 4 — Input Nama Peserta**
+
 > Masukkan nama setiap orang yang ikut patungan. Tambah baris baru sesuai jumlah peserta.
 
 **Step 5 — Assign Item ke Peserta**
+
 > Untuk setiap item, centang nama peserta yang memesan item tersebut. Jika satu item dipesan bersama, centang semua yang terlibat — biaya akan dibagi rata otomatis.
 
 **Step 6 — Klik "Hitung Split"**
+
 > Aplikasi menghitung total tagihan per orang, termasuk proporsi biaya tambahan seperti pajak dan servis. Hasil verifikasi total juga ditampilkan.
 
 ---
@@ -168,12 +177,12 @@ Dua model diuji coba untuk tugas pembacaan nota: **Google Gemini 2.5 Flash** (cl
 <details>
 <summary>📄 Nota 1 — Struk Restoran (inference time: 10.89 detik)</summary>
 
-| Nama Item | Qty | Harga Satuan | Total |
-|---|---|---|---|
-| Fried Kwetiau | 1 | Rp 99.000 | Rp 99.000 |
-| Spicy Lv 1 | 1 | Rp 1.000 | Rp 1.000 |
-| Orange Juice | 1 | Rp 50.000 | Rp 50.000 |
-| Avocado Juice | 1 | Rp 50.000 | Rp 50.000 |
+| Nama Item     | Qty | Harga Satuan | Total     |
+| ------------- | --- | ------------ | --------- |
+| Fried Kwetiau | 1   | Rp 99.000    | Rp 99.000 |
+| Spicy Lv 1    | 1   | Rp 1.000     | Rp 1.000  |
+| Orange Juice  | 1   | Rp 50.000    | Rp 50.000 |
+| Avocado Juice | 1   | Rp 50.000    | Rp 50.000 |
 
 **Subtotal:** Rp 200.000
 | Biaya Tambahan | Jumlah |
@@ -189,14 +198,14 @@ Dua model diuji coba untuk tugas pembacaan nota: **Google Gemini 2.5 Flash** (cl
 <details>
 <summary>📄 Nota 2 — Struk Minimarket (inference time: 15.13 detik)</summary>
 
-| Nama Item | Qty | Harga Satuan | Total |
-|---|---|---|---|
-| SR TWR SPC | 1 | Rp 15.000 | Rp 15.000 |
-| KP BRD L 0.020 | 1 | Rp 500 | Rp 500 |
-| ALFA SL STR150G | 1 | Rp 13.500 | Rp 13.500 |
-| GD 3IN1 MOC 10S | 1 | Rp 18.700 | Rp 18.700 |
-| Disc. | 1 | -Rp 1.800 | -Rp 1.800 |
-| GADDJAH TBRK138G | 1 | Rp 21.800 | Rp 21.800 |
+| Nama Item        | Qty | Harga Satuan | Total     |
+| ---------------- | --- | ------------ | --------- |
+| SR TWR SPC       | 1   | Rp 15.000    | Rp 15.000 |
+| KP BRD L 0.020   | 1   | Rp 500       | Rp 500    |
+| ALFA SL STR150G  | 1   | Rp 13.500    | Rp 13.500 |
+| GD 3IN1 MOC 10S  | 1   | Rp 18.700    | Rp 18.700 |
+| Disc.            | 1   | -Rp 1.800    | -Rp 1.800 |
+| GADDJAH TBRK138G | 1   | Rp 21.800    | Rp 21.800 |
 
 **Subtotal:** Rp 67.700
 | Biaya Tambahan | Jumlah |
@@ -238,21 +247,21 @@ Dua model diuji coba untuk tugas pembacaan nota: **Google Gemini 2.5 Flash** (cl
 <details>
 <summary>📋 Lihat Tabel Komparasi Lengkap</summary>
 
-| Aspek | gemini-2.5-flash | Qwen2-VL-2B |
-|---|---|---|
-| **Jenis Model** | Proprietary Multimodal LLM | Open Source Vision LLM |
-| **Akses** | API (Internet required) | Lokal (offline) |
-| **Butuh GPU?** | Tidak | Tidak wajib (CPU bisa, lambat) |
-| **API Key?** | Ya (Google AI Studio) | Tidak |
-| **Biaya** | Gratis (free tier) | Gratis (tapi download ~5GB) |
-| **Avg. Inference Time** | **13.01 detik** | 63.76 detik |
-| **Parse JSON Success Rate** | **2/2 (100%)** | 0/2 (0%) |
-| **Akurasi Nama Item** | Sangat Baik ⭐⭐⭐⭐⭐ | Cukup Baik ⭐⭐⭐ |
-| **Akurasi Harga** | Sangat Baik ⭐⭐⭐⭐⭐ | Cukup Baik ⭐⭐⭐ |
-| **Deteksi Biaya Tambahan** | Baik ⭐⭐⭐⭐ | Kurang Konsisten ⭐⭐ |
-| **Konsistensi Format Output** | Sangat Konsisten ⭐⭐⭐⭐⭐ | Kurang Konsisten ⭐⭐ |
-| **Kemudahan Setup** | Mudah (pip install saja) | Kompleks (butuh download besar) |
-| **Rekomendasi** | ✅ Direkomendasikan untuk produksi | ⚠️ Lebih cocok untuk offline/privasi |
+| Aspek                         | gemini-2.5-flash                   | Qwen2-VL-2B                          |
+| ----------------------------- | ---------------------------------- | ------------------------------------ |
+| **Jenis Model**               | Proprietary Multimodal LLM         | Open Source Vision LLM               |
+| **Akses**                     | API (Internet required)            | Lokal (offline)                      |
+| **Butuh GPU?**                | Tidak                              | Tidak wajib (CPU bisa, lambat)       |
+| **API Key?**                  | Ya (Google AI Studio)              | Tidak                                |
+| **Biaya**                     | Gratis (free tier)                 | Gratis (tapi download ~5GB)          |
+| **Avg. Inference Time**       | **13.01 detik**                    | 63.76 detik                          |
+| **Parse JSON Success Rate**   | **2/2 (100%)**                     | 0/2 (0%)                             |
+| **Akurasi Nama Item**         | Sangat Baik ⭐⭐⭐⭐⭐             | Cukup Baik ⭐⭐⭐                    |
+| **Akurasi Harga**             | Sangat Baik ⭐⭐⭐⭐⭐             | Cukup Baik ⭐⭐⭐                    |
+| **Deteksi Biaya Tambahan**    | Baik ⭐⭐⭐⭐                      | Kurang Konsisten ⭐⭐                |
+| **Konsistensi Format Output** | Sangat Konsisten ⭐⭐⭐⭐⭐        | Kurang Konsisten ⭐⭐                |
+| **Kemudahan Setup**           | Mudah (pip install saja)           | Kompleks (butuh download besar)      |
+| **Rekomendasi**               | ✅ Direkomendasikan untuk produksi | ⚠️ Lebih cocok untuk offline/privasi |
 
 </details>
 
@@ -334,20 +343,7 @@ Kontribusi sangat disambut! Berikut langkah-langkahnya:
 4. Push ke branch: `git push origin feature/nama-fitur`
 5. Buat Pull Request
 
-Pastikan kode kamu mengikuti standar PEP 8 dan sudah diuji sebelum PR diajukan.
-
----
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
-```
-MIT License — bebas digunakan, dimodifikasi, dan didistribusikan
-dengan syarat mencantumkan atribusi ke penulis asli.
-```
-
----
+.
 
 <p align="center">
   Dibuat dengan ☕ dan 🤖 oleh <a href="https://github.com/username">username</a>
