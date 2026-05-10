@@ -1,0 +1,14 @@
+Aspek,Gemini 2.5 Flash,Qwen2-VL-2B (Local)
+Jenis Model,Proprietary Multimodal LLM,Open Source Vision LLM
+Akses,API (Internet required),Lokal (offline)
+Butuh GPU?,Tidak,"Tidak wajib (CPU bisa, lambat)"
+API Key?,Ya (Google AI Studio),Tidak
+Biaya,Gratis (free tier),Gratis (tapi download ~5GB)
+Avg. Inference Time,13.01 detik,63.76 detik
+Parse JSON Success Rate,2/2 (100%),0/2
+Akurasi Nama Item,Sangat Baik ⭐⭐⭐⭐⭐,Cukup Baik ⭐⭐⭐
+Akurasi Harga,Sangat Baik ⭐⭐⭐⭐⭐,Cukup Baik ⭐⭐⭐
+Deteksi Biaya Tambahan,Baik ⭐⭐⭐⭐,Kurang Konsisten ⭐⭐
+Konsistensi Format Output,Sangat Konsisten ⭐⭐⭐⭐⭐,Kurang Konsisten ⭐⭐
+Kemudahan Setup,Mudah (pip install saja),Kompleks (butuh download besar)
+Rekomendasi Penggunaan,✅ Direkomendasikan untuk produksi,⚠️ Lebih cocok untuk offline/privasi
